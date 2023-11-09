@@ -4,7 +4,9 @@
     --white-color: rgb(231, 231, 231);
     --font-title:  'Sen', sans-serif;
     --font-content: 'Roboto', sans-serif;
-    --primary-color: rgb(217, 255, 0)
+    --primary-color: rgb(217, 255, 0);
+    --container-color: rgb(27, 27, 27);
+    /* --gray-color: rgb(173, 173, 173); */
 
 }
 /* font-family: 'Sen', sans-serif; */
@@ -102,6 +104,7 @@ body {
     right: 1px;
     border-radius: 50%;
     cursor: pointer;
+    transition: .5s ease-out;
 
 }
 
@@ -111,4 +114,187 @@ body {
     background-color: var(--black-color);
     position: fixed;
     top: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+
+}
+
+.left-menu-icon {
+    color: var(--white-color);
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+.container {
+    min-height: calc(100vh - 50px);
+    background-color: var(--container-color);
+    color: var(--white-color);
+}
+
+.features-content {
+    height: 50vh;
+    padding: 70px;
+    
+}
+
+.feature-title {
+    width: 200px;
+}
+
+.feature-desc {
+    width: 500px;
+    margin: 30px 0;
+}
+
+.feature-button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    color: var(--container-color);
+}
+
+.movie-list-container {
+    padding: 0 20px;
+    margin-left: 50px;
+}
+
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-list {
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+    
+}
+
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5 ;
+    
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-des,
+.movie-list-item:hover .movie-list-item-button {
+    opacity: 1;
+}
+
+.movie-list-item-img {
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+    border-radius: 10px;
+}
+
+.movie-list-item-title {
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-des {
+    background-color: #333;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    opacity: 0;
+    width: 230px;
+    transition: 1s all ease-in-out;
+}
+
+.movie-list-item-button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bold;
+    color: var(--container-color);
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.arrow {
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: var(--white-color);
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.container.active {
+    background-color: var(--white-color);
+}
+
+.movie-list-title.active{
+    color: var(--black-color);
+}
+
+.navbar .active{
+    background-color: var(--white-color);
+    color: var(--black-color);
+}
+
+.sidebar.active{
+    background-color: var(--white-color)
+}
+
+.logo{
+    background-color :var(--black-color);
+    border-radius: 10px;
+}
+
+.left-menu-icon.active{
+    color: var(--black-color);
+}
+
+.toggle.active{
+    background-color: var(--black-color);
+}
+
+.toggle-ball.active{
+    background-color: var(--white-color);
+    transform: translateX(-20px);
+    transition: .5s ease-out;
+}
+
+.arrow.active {
+    color: #f50101;
+}
+
+@media only screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
 }

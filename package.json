@@ -1,14 +1,22 @@
 {
   "name": "movies-html-css-jsvanilla",
   "version": "1.0.0",
-  "description": "movie app",
-  "main": "index.js",
+  "description": "",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "gianfranco navas",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "^2.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify-es": "^3.0.0"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^7.1.0"
   }
 }
